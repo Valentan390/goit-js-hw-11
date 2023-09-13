@@ -16,7 +16,7 @@ const unsplashAPI = new UnsplashAPI();
 
 const observerOptions = {
   root: null,
-  rootMargin: '0px 0px 300px 0px',
+  rootMargin: '0px 0px 600px 0px',
   threshold: 1.0,
 };
 
@@ -101,11 +101,8 @@ const onSearchFormElSubmit = async event => {
 
     Notify.success(`Hooray! We found ${data.total} images.`);
     
-    setTimeout(() => {
-
+   
       observer.observe(intersectingEl);
-
-    }, 5000);
 
     if (sumOfPhotos === data.totalHits) {
 
